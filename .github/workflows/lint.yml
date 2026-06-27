@@ -7,7 +7,7 @@ on:
   #it will run whenever the code gets modified
     paths: "*.py"
 jobs:
-  code:
+  code_linting:
     runs-on: ubuntu-latest
     #below step will automaticly clone the files
     steps:
@@ -16,4 +16,7 @@ jobs:
 #this step will install Linting tool
       - name: install Linter
         run : pip install ruff
+#this will run the linter
+      - name:   check the file for Linting
+        run: ruff check .
         
