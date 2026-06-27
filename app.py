@@ -1,7 +1,7 @@
 # adding changes to check if Linter workflow is working fine
 #linter will check if any issues 
 from flask import Flask, render_template
-app = Flask(__name__)
+app = Flask(__name__
 
 
 @app.route('/')
