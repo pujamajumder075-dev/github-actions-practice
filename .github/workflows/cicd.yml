@@ -17,14 +17,14 @@ jobs:
       #here you can run "docker build"
         run : echo "building using docker"
   test :
-   needs: [build]
+    needs: [build]
     runs-on: ubuntu-latest
     steps :
       - name : running test cases
         run : echo "testing the app"
   deploy :
-    needs : [build,test]
+    needs : [test]
     runs-on: ubuntu-latest
     steps :
-      - name : deploying the maching
+      - name : deploying the machine
         run : echo "deploying the code"
