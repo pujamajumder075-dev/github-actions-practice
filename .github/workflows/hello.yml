@@ -1,0 +1,16 @@
+#workflows
+# On tells when the workflow should run
+#jobs
+#steps
+#actions
+
+name : Hello
+on: 
+  workflow_dispatch: 
+jobs :   
+  say-hello :
+  #creates an ephermal container wuth ubuntu running
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run : echo "hello everyone" 
